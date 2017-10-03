@@ -1,3 +1,4 @@
+
 // 2017 Stepan Stepanov
 // Feel free to use according to the GPL license
 
@@ -120,11 +121,6 @@
                         }
 
                     } catch (err) {
-                        // Is it a JSON-parsing error?
-                        if ( err.message.indexOf('Unexpected token') >= 0 ) {
-                            err.message = settings.textErrorAjaxJson;
-                        }
-
                         // Showing the error message
 
                         if (ajaxStatusObj) {
@@ -150,7 +146,9 @@
                     }
 
                     // Disabling ajax indication
-                    if (ajaxStatusObj) { ajaxStatusObj.html(errorToDisplay).fadeIn(200); }
+                    if (ajaxStatusObj) {
+                        ajaxStatusObj.html(errorToDisplay).fadeIn(200);
+                    }
 
                     if ( isset(event) ) {
                         obj.html("Retry");
