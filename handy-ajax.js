@@ -99,7 +99,7 @@
 
                     try {
                         // Request went smoothly
-                        if (data.result && data.result.toLowerCase() == "ok") {
+                        if (data.result && data.result.toUpperCase() === "OK") {
                             settings.success(obj, data);
 
                             if ( isset(event) ) {
