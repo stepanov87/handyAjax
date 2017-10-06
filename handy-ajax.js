@@ -28,7 +28,6 @@
 
             textErrorAjax: "Error occured: ",
             textErrorAjaxTimeout: "timeout (server did not respond)",
-            textErrorAjaxJson: "Error while processing the server response",
             textErrorUndefined: "unspecified error"
         }, options);
 
