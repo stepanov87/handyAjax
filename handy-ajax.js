@@ -27,7 +27,7 @@
             error: function() { },
 
             textErrorAjax: "Error occured: ",
-            textErrorAjaxTimeout: "timeout (server did not respond)",
+            textErrorTimeout: "timeout (server did not respond)",
             textErrorUndefined: "unspecified error"
         }, options);
 
@@ -139,7 +139,7 @@
                 },
                 error: function(xhr, status, error) {
                     if (status === "timeout") {
-                        errorToDisplay = settings.textErrorAjax + settings.textErrorAjaxTimeout;
+                        errorToDisplay = settings.textErrorAjax + settings.textErrorTimeout;
                     } else {
                         errorToDisplay = settings.textErrorAjax + xhr.status + " " + error;
                     }
