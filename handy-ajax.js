@@ -42,6 +42,12 @@
                 obj = document;
             }
 
+            var data = settings.data(obj);
+
+            if ( data === false ) {
+                return false;
+            }
+
             var ajaxSpinnerObj = settings.ajaxSpinner(obj);
             var ajaxStatusObj  = settings.ajaxStatus(obj);
 
@@ -87,7 +93,7 @@
             $.ajax({
                 type: settings.type,
                 url:  settings.url,
-                data: settings.data(obj),
+                data: data,
                 dataType: "json",
                 timeout: settings.timeout,
                 success: function(data) {
